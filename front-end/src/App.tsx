@@ -1,23 +1,12 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import ClusterForm from '../../front-end/src/Components/ClusterForm'; // Adjust the path according to your file structure
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {/* Other components or content can also go here */}
+        <ClusterForm /> {/* This line adds the ClusterForm to your UI */}
       </header>
     </div>
   );
