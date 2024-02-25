@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "concurrently \"cd front-end && npm install\" \"cd back-end && npm install\"",
     "start": "concurrently \"cd front-end && npm start\" \"cd back-end && node index.js\"",
     "start:frontend": "cd client && npm start",
     "start:backend": "cd server && node index.js"

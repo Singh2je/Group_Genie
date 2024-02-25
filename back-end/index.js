@@ -20,11 +20,16 @@ app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-// Connect to MongoDB
-mongoose.connect("mongodb-connection-string", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+// Example connection string for MongoDB Atlas
+const connectionString = 'mongodb+srv://<username>:<password>@<cluster-url>/<database-name>?retryWrites=true&w=majority';
+
+mongoose.connect(connectionString, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => {
+        console.log('Connected to MongoDB Atlas');
+    })
+    .catch(error => {
+        console.error('Error connecting to MongoDB Atlas:', error);
+    });
 
 // Clustering endpoint
 app.post("/cluster-students", async (req, res) => {
